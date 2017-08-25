@@ -4,8 +4,10 @@ from bs4 import BeautifulSoup
 from urllib.parse import quote
 
 
+
 def get_text(URL, ARTICLE_NO, article_TITLE, keytype):
-    output_file_name = str(keytype) + '-' + str(ARTICLE_NO) + '.' + util.cleantext(article_TITLE) + '.txt'
+    
+    output_file_name = 'NAVER/' + str(keytype) + '-' + str(ARTICLE_NO) + '.' + util.cleantext(article_TITLE) + '.txt'
     output_file = open(output_file_name, 'w', encoding="utf8")
     
     try:
@@ -20,3 +22,5 @@ def get_text(URL, ARTICLE_NO, article_TITLE, keytype):
         print(e)
 
     output_file.close()
+
+
